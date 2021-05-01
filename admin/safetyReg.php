@@ -137,7 +137,7 @@ if(isset($_POST['submit']))
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                <label for="inputModalName" class="control-label " >Passanger Side View Mirror </label>
+                                <label for="inputModalName" class="control-label " >Passenger Side View Mirror </label>
                                 <select  required  class="form-control" id="inputpassengersideviewmirror" name="psvm">
                                     <option value="" > select </option>
                                     <option value="yes"> Yes </option>
@@ -189,7 +189,7 @@ if(isset($_POST['submit']))
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                <label for="inputModalName" class="control-label " >Door Ajar Warning</label>
+                                <label for="inputModalName" class="control-label " >Door Hazard Warning</label>
                                 <select  required  class="form-control" id="inputdoorajarwarning" name="daw">
                                     <option value="" > select </option>
                                     <option value="yes"> Yes </option>
@@ -273,7 +273,7 @@ if(isset($_POST['submit']))
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                <label for="inputModalName" class="control-label " >Bind Spot Monitor</label>
+                                <label for="inputModalName" class="control-label " >Blind Spot Monitor</label>
                                 <select  required  class="form-control" id="inputbindspotmonitor" name="bsm">
                                     <option value="" > select </option>
                                     <option value="yes"> Yes </option>

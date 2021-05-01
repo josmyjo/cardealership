@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Car Dealer Website Template</title>
+    <title>Maruti Suzuki</title>
 
     <link rel="stylesheet" type="text/css" href="../user/assets/css/bootstrap.min.css">
 
@@ -42,11 +42,11 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Car Dealer<em> Website</em></a>
+                        <a href="index.html" class="logo">Maruti <em> Suzuki</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="../user/index.html" class="active">Home</a></li>
                             <li><a href="cars.html">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -60,7 +60,9 @@
                                     <a class="dropdown-item" href="terms.html">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="contact.html">Contact</a></li> 
+                            <li><a href="../login/index.php">Login</a></li> 
+                            <li><a href="../signup/test.php">Sign Up</a></li> 
+
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

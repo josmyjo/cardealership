@@ -85,7 +85,7 @@ if(isset($_POST['submit'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                            <label for="inputeas" class="control-label " >ELECTRIC ADJUSTABLE SEAT</label>
+                            <label for="inputeas" class="control-label " >ADJUSTABLE HEADLIGHTS</label>
                             <select class="form-control" id="inputeas" required name="eas">
                                 <option value="" > select </option>
                                 <option value="yes"> Yes </option>

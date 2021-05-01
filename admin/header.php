@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../admin/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Dashboard by Creative Tim
+    
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -64,10 +64,18 @@
 				  <a class="dropdown-item" href="../admin/branchReg.php">Branch</a>
                   <a class="dropdown-item" href="../admin/carmodel.php">CAR</a>
                   <a class="dropdown-item" href="../admin/varient.php">VARIANT</a>
+                  <a class="dropdown-item" href="../admin/user.php">User</a>
                   <a class="dropdown-item" href="../admin/carPics.php">PICTURES</a>
                   <a class="dropdown-item" href="../admin/entertainment.php">ENTERTAINMENT</a>
                   <a class="dropdown-item" href="../admin/exterior.php">EXTERIOR</a>
                   <a class="dropdown-item" href="../admin/safetyReg.php">SAFETY</a>
+                  <a class="dropdown-item" href="../admin/capability.php">CAPABILITY</a>
+                  <a class="dropdown-item" href="../admin/convenience.php">CONVENIENCE</a>
+                  <a class="dropdown-item" href="../admin/diemensions.php">DIEMENSIONS</a>
+                  <a class="dropdown-item" href="../admin/interior.php">INTERIOR</a>
+                  <a class="dropdown-item" href="../admin/suspension.php">SUSPENSION</a>
+
+
                 </div>
               </li>
           <li>
@@ -77,13 +85,19 @@
                   
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-				  <a class="dropdown-item" href="../admin/branchView.php">Branch</a>
+                  <a class="dropdown-item" href="../admin/userView.php">User</a>
+				          <a class="dropdown-item" href="../admin/branchView.php">Branch</a>
                   <a class="dropdown-item" href="../admin/modelView.php">CAR</a>
                   <a class="dropdown-item" href="../admin/variantView.php">VARIANT</a>
                   <a class="dropdown-item" href="../admin/carPicsView.php">PICTURES</a>
                   <a class="dropdown-item" href="../admin/entertainmentView.php">ENTERTAINMENT</a>
                   <a class="dropdown-item" href="../admin/exteriorView.php">EXTERIOR</a>
                   <a class="dropdown-item" href="../admin/safetyRegView.php">SAFETY</a>
+                  <a class="dropdown-item" href="../admin/capabilityView.php">CAPABILITY</a>
+                  <a class="dropdown-item" href="../admin/convenienceView.php">CONVENIENCE</a>
+                  <a class="dropdown-item" href="../admin/diemensionsView.php">DIEMENSIONS</a>
+                  <a class="dropdown-item" href="../admin/interiorView.php">INTERIOR</a>
+                  <a class="dropdown-item" href="../admin/suspensionView.php">SUSPENSION</a>
                 </div>
               </li>
         
@@ -93,12 +107,19 @@
                   
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="../admin/branchReport.php">Branch</a>
                   <a class="dropdown-item" href="../admin/modelReport.php">CAR</a>
                   <a class="dropdown-item" href="../admin/varientReport.php">VARIANT</a>
                   <a class="dropdown-item" href="../admin/carPicsReport.php">PICTURES</a>
                   <a class="dropdown-item" href="../admin/entertainmentReport.php">ENTERTAINMENT</a>
                   <a class="dropdown-item" href="../admin/exteriorReport.php">EXTERIOR</a>
                   <a class="dropdown-item" href="../admin/safetyReport.php">SAFETY</a>
+                  <a class="dropdown-item" href="../admin/capabilityReport.php">CAPABILITY</a>
+                  <a class="dropdown-item" href="../admin/userReport.php">User</a>
+                  <a class="dropdown-item" href="../admin/capabilityReport.php">CAPABILITY</a>
+                 <!-- <a class="dropdown-item" href="../admin/convenienceReport.php">CONVENIENCE</a>
+                  <a class="dropdown-item" href="../admin/interior.php">INTERIOR</a>
+                  <a class="dropdown-item" href="../admin/suspension.php">SUSPENSION</a>-->
                 </div>
             </li>
         </ul>

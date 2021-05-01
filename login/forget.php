@@ -79,7 +79,8 @@
             </div>
 
             <div class="container-login100-form-btn">
-              <button type="submit" class="login100-form-btn">SEND OTP</button>
+              <button type="submit" class="login100-form-btn" id="otpbutton">SEND OTP</button>
+              <div id="change" class="text-center"> </div>
             </div>
             <br>
           </form>
@@ -88,11 +89,12 @@
 
                   <!-- Modal content-->
                   <div class="modal-content">
+                  <form id="myform" action="#" method="POST">
                     <div class="modal-body">
                       <h5 align="center" class="modal-title">Email Validation</h5>
                       <br>
                         <div class="container">
-                          <form id="verifyform2" action="#" method="POST">
+                          
                             <input type="hidden" value="0" id="otp_id">
                             <input type="hidden" value="0" id="getEmail">
                             <input type="text" class="form-control" placeholder="Enter OTP" name="otp" id="votp" required/>
@@ -103,15 +105,15 @@
                             <br>
                         </div>
                         <div class="text-center">
-                            <button style="width:90px;" name="otpgenerator" type="submit" class="btn btn-primary "> Reset   </button>
+                            <input type="submit" name="resetme" class="btn btn-primary " value="Reset">
+                            <div id="error" class="text-center"> </div>
+                            <input type="button" name="resetme" class="btn btn-primary resendButton" style="display:none;" value="Resend OTP">
                         </div>
                         <br>
-                        <div id="change" class="text-center"> </div>
+                        
                     </div>
                     </form>
-                    <div class="modal-footer">
-                      <button type="button" id="closeVerify" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+                    
                   </div>
 
               </div>
@@ -144,49 +146,64 @@
     <script>
       $("#verifyLogin").submit(function (e) {
         e.preventDefault(); 
+        init_otp_send();
+      });
+      $(".resendButton").click(function(){
+        init_otp_send();
+      });
+      function init_otp_send(){
         const email = $("#verifyEmail").val();
-
+        $("#otpbutton").text("Sending...");
         $.ajax({
           type: "POST",
           url: "otpgenerator.php",
           data: { email_id: email,},
           dataType: "json",
           success: function (data) {
+            $("#otpbutton").text("SEND OTP");
             if(data.status == 1){
                 $("#otp_id").val(data.otp_id);
                 $("#getEmail").val(data.email);
                 $("#myModal").modal("show");
               }else{
-                alert("unable to sent otp to your mail id")
+                alert(data.message);
               }
           },
           error: function (er) {
             console.log(er);
           },
         });
-      });
+      }
     </script>
 
 <script>
-      $("#verifyform2").submit(function (e) {
+      $("#myform").submit(function (e) {
         e.preventDefault(); 
         const otp_id = $("#otp_id").val();
         const otp = $("#votp").val();
         const pass = $("#vPass").val();
+        const cpass = $("#vCPass").val();
         const email = $("#getEmail").val();
-
+        $(".resendButton").hide();
 
         $.ajax({
           type: "POST",
           url: "otp_verify.php",
-          data: { otp_id:otp_id,otp: otp,pass:pass,email:email},
+          data: { otp_id:otp_id,otp: otp,pass:pass,email:email,cpass:cpass},
           dataType: "json",
           success: function (data) {
             if(data.status == 1){
-                $("#change").val('Changed Password');
-                $("#myModal").modal("close");
+              $('#myform').find("input[type=text], textarea").val("");
+                $("#change").html('Password changed successfully');
+                $("#myModal").modal('toggle');
+                setTimeout(function(){ 
+                  window.location.href = '../login/index.php';
+                 }, 3000);
+              }else if(data.status == 2){
+                $("#error").html('Confirm password not matching');
               }else{
-                alert("unable to sent otp to your mail id")
+                $(".resendButton").show()
+                $("#error").html('Invalid otp provided');
               }
           },
           error: function (er) {

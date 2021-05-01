@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <title>Login V8</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +96,7 @@
             <div class="text-right p-t-13 p-b-23">
               <span class="txt1"> Forgot </span>
 
-              <a href="#" class="txt2"> Username / Password? </a>
+              <a href="../login/forget.php" class="txt2">  Password? </a>
             </div>
 
             <div class="container-login100-form-btn">

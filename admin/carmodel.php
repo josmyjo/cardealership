@@ -113,7 +113,7 @@ if(isset($_POST['submit'])) {
                         <div id="show"></div>
                         
                     <div class="form-group">
-                        <label for="inputCarType" class="control-label ">CAR TYPE</label>
+                        <label for="inputCarType" class="control-label ">Transmission</label>
                             <input type="text" class="form-control" onkeypress="return isNumericKey(event)" value="<?= $cartype ?>" id="inputCarType" name="carType" placeholder="" required  />
                         </div>
                     <div class="form-group">

@@ -1,8 +1,12 @@
 <?php 
-include '../header.php'; 
+include "../user/header.php";
 ?>
+<br>
+<br>
+<br>
+<br>
 
-<div class="container jumbotron p-3 my-3 bg-info text-white">
+<div class="container jumbotron p-3 my-3">
         <form action="userRegistration.php" method="POST" data-toggle="validator" role="form" id="myForm" autocomplete="off">
 
             <div class="row">
@@ -189,7 +193,8 @@ include '../header.php';
       </div>
     </div>
 <?php
-include '../footer.php';
+include "../user/footer.php";
+
 ?>
 <script>
   $(".numberonly").keypress(function (e) {
@@ -207,13 +212,13 @@ include '../footer.php';
         							var dateString = document.getElementById('inputDOB').value;
         							var myDate = new Date(dateString);
         							var today = new Date();
-        							if ((today.getFullYear() - myDate.getFullYear() > 18) && (today.getFullYear() - myDate.getFullYear() < 60)) { 
+        							if ((today.getFullYear() - myDate.getFullYear() > 18) && (today.getFullYear() - myDate.getFullYear() < 80)) { 
          				   					$('#p4').hide();
        						 			}
        								else{
            
             							$('#p4').show();
-            							$('#p4').text("* Age between 18 years and 60 years ONLY");
+            							$('#p4').text("* Age between 18 years and 80 years ONLY");
            								 $("#inputDOB").focus();
 									}
     							}
@@ -258,7 +263,7 @@ include '../footer.php';
                         success: function(data){
                             if(data.status==1){
                               alert(data.message);
-                              window.location.href='test.php';
+                              window.location.href = '../login/index.php';
 
                             }else{
                               alert("faild to save");
@@ -393,7 +398,7 @@ include '../footer.php';
           email: {
               validators: {
                   emailAddress: {
-                       message: 'The value is not a valid email address'
+                   
                     },
                   regexp: {
                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
@@ -405,7 +410,7 @@ include '../footer.php';
             message: "The last Name is not valid",
             validators: {
               notEmpty: {
-                message: "The password is required and can't be empty",
+                message: "The last name is required and can't be empty",
               },
               stringLength: {
                 min: 1,
