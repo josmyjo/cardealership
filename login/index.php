@@ -145,7 +145,7 @@
           dataType: "html",
           success: function (data) {
             if(data==1){
-              window.location.href='../user/index.html';
+              window.location.href='../user/index.php';
             }else{
               swal(data);
             }

@@ -14,10 +14,10 @@ if(isset($_POST['submit'])) {
     $seat= $_POST['sc'];
 	$modelName= $_POST['modelName'];
     $varientName = $_POST['variantName'];
-    
+    $weight = $_POST['weight'];
 
-    $sql ="INSERT INTO dimensions (length,width,height,wheelbase,fronttrack,reartrack,seatingcapacity,model_id,varient_id)
-    VALUE('$length','$width','$height','$wb','$front','$rear','$seat','$modelName','$varientName')";
+    $sql ="INSERT INTO dimensions (length,width,height,wheelbase,fronttrack,reartrack,seatingcapacity,model_id,varient_id,weight)
+    VALUE('$length','$width','$height','$wb','$front','$rear','$seat','$modelName','$varientName','$weight')";
 
     $result = $con->query($sql);
 
@@ -104,6 +104,10 @@ if(isset($_POST['submit'])) {
                     <div class="form-group">
                         <label for="inputseatingcapacity" class="control-label ">Seating Capacity</label>
                             <input type="text" class="form-control" id="sc" name="sc" placeholder="" required name="Seating_Capacity" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputweight" class="control-label ">Weight</label>
+                            <input type="text" class="form-control" id="weight" name="weight" placeholder="" required name="weight" />
                     </div>
 
                     <div class="form-group text-center">

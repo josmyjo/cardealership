@@ -22,8 +22,8 @@ if(isset($_POST['branchID'])) {
                             <tr align="center">
                                 <th> Modal </th>
                                 <th> Image </th>
-                                <th> CAR TYPE </th>
-                                <th> MANUFACTURING YEAR </th>
+                                <th> Transmission </th>
+                                <th> Manufacturing year </th>
                                     <th> Options </th>
                             </tr>
                             <?php

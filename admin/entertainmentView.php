@@ -17,7 +17,7 @@ if(isset($_GET["id"]))
 <div class="container jumbotron p-3 my-3 ">
     <div class="card">
         <div class="card-header">
-            <h5 class="title">Model</h5>
+            <h5 class="title">Entertainment</h5>
         </div>
         <div class="card-body">
         <div class="form-group">

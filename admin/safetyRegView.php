@@ -13,7 +13,7 @@ if(isset($_GET["id"]))
 <div class="container jumbotron p-3 my-3 ">
     <div class="card">
         <div class="card-header">
-            <h5 class="title">Model</h5>
+            <h5 class="title">Safety Details</h5>
         </div>
         <div class="card-body">
             <form action="exteriorView.php" method="POST" name="pic" id="getPic">

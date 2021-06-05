@@ -10,10 +10,12 @@ if(isset($_POST['submit'])) {
     $eas = $_POST['eas'];
 	$flr=$_POST['flr'];
     $power=$_POST['power'];
-    
+    $rain=$_POST['rain'];
+    $wheel=$_POST['wheel'];
+    $sun=$_POST['sun'];
 
-    $sql ="INSERT INTO exterior (foglightfont,electric_adjustableseat,foglightnear,powerantenna,model_id,varient_id)
-    VALUE('$flf','$eas','$flr','$power',$modelName,$varientName)";
+    $sql ="INSERT INTO exterior (foglightfont,electric_adjustableseat,foglightnear,powerantenna,model_id,varient_id,rain,wheel,sun)
+    VALUE('$flf','$eas','$flr','$power',$modelName,$varientName,'$rain','$wheel','$sun')";
 
     $result = $con->query($sql);
 
@@ -111,6 +113,39 @@ if(isset($_POST['submit'])) {
                             <div class="form-group">
                             <label for="inputpower" class="control-label " >POWER ANTENNA</label>
                             <select class="form-control" id="inputpower" required name="power">
+                                <option value="" > select </option>
+                                <option value="yes"> Yes </option>
+                                <option value="no"> No </option>
+                            
+                            </select>      
+                                </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                            <label for="inputrain" class="control-label " >Rain Sensing Wiper</label>
+                            <select class="form-control" id="inputrain" required name="rain">
+                                <option value="" > select </option>
+                                <option value="yes"> Yes </option>
+                                <option value="no"> No </option>
+                            
+                            </select>      
+                                </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                            <label for="inputwheel" class="control-label " >Wheel Covers</label>
+                            <select class="form-control" id="inputwheel" required name="wheel">
+                                <option value="" > select </option>
+                                <option value="yes"> Yes </option>
+                                <option value="no"> No </option>
+                            
+                            </select>      
+                                </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                            <label for="inputsun" class="control-label " >Sun roof</label>
+                            <select class="form-control" id="inputsun" required name="sun">
                                 <option value="" > select </option>
                                 <option value="yes"> Yes </option>
                                 <option value="no"> No </option>

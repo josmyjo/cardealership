@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +20,7 @@
   <link href="../admin/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../admin/assets/demo/demo.css" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 </head>
 
 <body class="">
@@ -64,14 +67,14 @@
 				  <a class="dropdown-item" href="../admin/branchReg.php">Branch</a>
                   <a class="dropdown-item" href="../admin/carmodel.php">CAR</a>
                   <a class="dropdown-item" href="../admin/varient.php">VARIANT</a>
-                  <a class="dropdown-item" href="../admin/user.php">User</a>
+          
                   <a class="dropdown-item" href="../admin/carPics.php">PICTURES</a>
                   <a class="dropdown-item" href="../admin/entertainment.php">ENTERTAINMENT</a>
                   <a class="dropdown-item" href="../admin/exterior.php">EXTERIOR</a>
                   <a class="dropdown-item" href="../admin/safetyReg.php">SAFETY</a>
                   <a class="dropdown-item" href="../admin/capability.php">CAPABILITY</a>
                   <a class="dropdown-item" href="../admin/convenience.php">CONVENIENCE</a>
-                  <a class="dropdown-item" href="../admin/diemensions.php">DIEMENSIONS</a>
+                  <a class="dropdown-item" href="../admin/dimensions.php">DIEMENSIONS</a>
                   <a class="dropdown-item" href="../admin/interior.php">INTERIOR</a>
                   <a class="dropdown-item" href="../admin/suspension.php">SUSPENSION</a>
 
@@ -95,7 +98,7 @@
                   <a class="dropdown-item" href="../admin/safetyRegView.php">SAFETY</a>
                   <a class="dropdown-item" href="../admin/capabilityView.php">CAPABILITY</a>
                   <a class="dropdown-item" href="../admin/convenienceView.php">CONVENIENCE</a>
-                  <a class="dropdown-item" href="../admin/diemensionsView.php">DIEMENSIONS</a>
+                  <a class="dropdown-item" href="../admin/dimensionsView.php">DIEMENSIONS</a>
                   <a class="dropdown-item" href="../admin/interiorView.php">INTERIOR</a>
                   <a class="dropdown-item" href="../admin/suspensionView.php">SUSPENSION</a>
                 </div>

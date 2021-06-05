@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +18,15 @@
 
     <link rel="stylesheet" href="../user/assets/css/style.css">
 
+    <!-- payment -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+<link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+<!-- PROFILE -->
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
     </head>
     
     <body>
@@ -60,8 +70,13 @@
                                     <a class="dropdown-item" href="terms.html">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="../login/index.php">Login</a></li> 
-                            <li><a href="../signup/test.php">Sign Up</a></li> 
+                            
+                            <?php if( isset($_SESSION['user_id']) ){ ?>
+                                <li><a href="../user/logout.php">Logout</a></li> 
+                                <?php }else{ ?> 
+                                    <li><a href="../login/index.php">Login</a></li> 
+                                    <li><a href="../signup/test.php">Sign Up</a></li> 
+                                <?php } ?>
 
                         </ul>        
                         <a class='menu-trigger'>

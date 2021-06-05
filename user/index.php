@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +10,18 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Car Dealer Website Template</title>
+    <title>©MARUTI SUZUKI INDIA LIMITED</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- contact -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css'>
 
     </head>
     
@@ -42,7 +48,10 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo"> Maruti<em> Suzuki</em></a>
+                        <a href="index.html" class="logo"> Maruti<em> Suzuki 
+
+                            
+                        </em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
@@ -52,7 +61,7 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
+                                    <a class="dropdown-item" href="https://www.marutisuzuki.com/corporate/about-us">About Us</a>
                                     <a class="dropdown-item" href="blog.html">Blog</a>
                                     <a class="dropdown-item" href="team.html">Team</a>
                                     <a class="dropdown-item" href="testimonials.html">Testimonials</a>
@@ -60,8 +69,12 @@
                                     <a class="dropdown-item" href="terms.html">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="../login/index.php">Login</a></li> 
-                            <li><a href="../signup/test.php">Sign Up</a></li> 
+                            <?php if( isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0 ){ ?>
+                                <li><a href="../user/logout.php">Logout </a></li> 
+                                <?php }else{ ?> 
+                                    <li><a href="../login/index.php">Login</a></li> 
+                                    <li><a href="../signup/test.php">Sign Up</a></li> 
+                                <?php } ?>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -82,10 +95,10 @@
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <h6>Lorem ipsum dolor sit amet</h6>
+                <h6></h6>
                <!-- <h2>Best <em>car dealer</em> in town!</h2> -->
                 <div class="main-button">
-                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Welcome to MARUTI SUZUKI INDIA LIMITED </a>
                 </div>
             </div>
         </div>
@@ -100,7 +113,7 @@
                     <div class="section-heading">
                         <h2>Featured <em>Cars</em></h2>
                         <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                        <p>Experiences fuelled by innovations, forward thinking, and a commitment to bring the very best to Indian roads. From the day the iconic Maruti 800 was launched in 1983, the company has been spearheading a revolution of change. Turning an entire country’s need for driving, into its love for driving.</p>
                     </div>
                 </div>
             </div>
@@ -194,24 +207,35 @@
    
     <!-- ***** Blog End ***** -->
 
-    <!-- ***** Call to Action Start ***** -->
-    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="cta-content">
-                        <h2>Send us a <em>message</em></h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
-                        <div class="main-button">
-                            <a href="contact.html">Contact us</a>
-                        </div>
-                    </div>
+    
+    <section>
+        <div class="padding">
+    <div style="text-align: center"> <i class="mdi mdi-forum"></i> <br>
+        <h2 style="color: #666;">Contact Us</h2> <br>
+        <p class="text-center" style="color:#444;">Have any Questions? Feel free to contact our Tech Support</p> <br> <button type="submit" class="btn btn-outline-dark ml-sm-2 mb-2" style="border-radius: 50px" data-toggle="modal" data-target="#contact">&emsp;&emsp;Contact Support&emsp;&emsp;</button>
+    </div>
+    <!--Contact Modal-->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">We would love to hear from you!!</h5> <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                 </div>
+                <div class="modal-body">
+                    <form class="form my-3 mr-2 ml-2">
+                        <div class="form-row">
+                            <div class="form-group col-sm"> <label for="exampleInputEmail1" style="color: #fff;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First"> </div>
+                            <div class="form-group col-sm"> <label class="sm-lbl" for="exampleInputEmail1" style="color:rgba(0, 0, 0, 0); visibility: hidden;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last"> </div>
+                        </div>
+                        <div class="form-group"> <label for="exampleInputEmail1" style="color: #fff;">Enter Email</label> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""> </div>
+                        <div class="form-group"> <label for="exampleFormControlTextarea1" style="color: #fff;">Your Query or Question</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> </div>
+                    </form>
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-outline-light ml-sm-2" style="border-radius: 50px; width:100%;" data-dismiss="modal" aria-label="Close">Submit</button> </div>
             </div>
         </div>
-    </section>
-   
-
+    </div>
+</div>    </section>
     
     
     <!-- ***** Footer Start ***** -->
@@ -245,6 +269,8 @@
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
   </body>
 </html>

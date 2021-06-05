@@ -1,13 +1,15 @@
 <?php
+session_start();
 include '../connection.php';
-
 
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     
     $result = mysqli_query($con,"SELECT *FROM  userRegistration WHERE email = '$email' and passwordz = '$password'");
-
+    $row=mysqli_fetch_array($result);
+   
     if(!empty(mysqli_num_rows($result))){
+        $_SESSION['user_id'] = $row['user_id'];
         echo 1;
     }else{
         $result = mysqli_query($con,"SELECT *FROM  userRegistration WHERE email = '$email' ");

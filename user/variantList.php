@@ -46,7 +46,7 @@ if(isset($_GET['id'])) {
                                 </p>
 
                                 <ul class="social-icons">
-                                    <li><a href="variantList.php?id=<?php echo $row['variant_id']?>">+ View Car</a></li>
+                                    <li><a href="carDetails.php?id=<?php echo $row['variant_id']?>">+ View Car</a></li>
                                     <li><a href="variantList.php?id=<?php echo $row['variant_id']?>"> Book</a></li>
                                     <li><a href="variantList.php?id=<?php echo $row['variant_id']?>"> Text Ride</a></li>
 
