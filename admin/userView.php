@@ -20,9 +20,9 @@ if(isset($_GET["id"]))
             <h5 class="title">Users</h5>
         </div>
         <div class="card-body">
-            <table class="table table-stripped,table table-hover" >
+            <table class="table table-responsive table-hover" id="myTable">
 
-
+                <thead>
                     <tr align="center">
                         <th> Name </th>
                         <th>  DOB </th>
@@ -32,14 +32,16 @@ if(isset($_GET["id"]))
                         <th>  Email </th>
                             <th> Options </th>
                     </tr>
+                </thead>
+                <tbody>
                     <?php
                         while($row=mysqli_fetch_array($carResult))
                         {
                             ?>
                             <tr align="center">
-                                <td><?= $row['first_name'] ?> <?= $row['last_name'] ?></td>	
-                                <td><?= $row['dob'] ?></td>	
-                                <td><?= $row['aadhar_number'] ?></td>	
+                                <td><?= $row['first_name'] ?> <?= $row['last_name'] ?></td> 
+                                <td><?= $row['dob'] ?></td> 
+                                <td><?= $row['aadhar_number'] ?></td>   
                                 <td><?= $row['phone_number'] ?></td>
                                 <td><?= $row['pin_code'] ?></td>
                                 <td><?= $row['email'] ?></td>
@@ -52,6 +54,7 @@ if(isset($_GET["id"]))
                         }
 
                         ?>
+                </tbody>
             </table>
         </div>
                     </div>

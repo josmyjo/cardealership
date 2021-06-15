@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
     $rearcamera= $_POST['rearcamera'];
     $bsm= $_POST['bsm'];
     $hillassist= $_POST['hillassist'];
-    $sql ="INSERT INTO `safety` (`antilock_breakingstm`, `brakeassist`, `centrellockstm`, `airbags`, `daynight_rearviewmirror`, `passengersidemirror`, `xenonheadlamp`, `halogenheadlamp`, `rearseatbelt`, `seatbeltwarning`, `doorajarwarning`, `sideimpactbeams`, `adjustableseat`, `vehiclecntrl`, `engineimmobilizer`, `crashsensor`, `electronicbreakdis`, `rearcamera`, `blindspot`, `hillassist`, `variant_id`,`model_id`) VALUES 
+    $sql ="INSERT INTO `safety` (`antilock_breakingstm`, `brakeassist`, `centrellockstm`, `airbags`, `daynight_rearviewmirror`, `passengersidemirror`, `xenonheadlamp`, `halogenheadlamp`, `rearseatbelt`, `seatbeltwarning`, `doorajarwarning`, `sideimpactbeams`, `adjustableseat`, `vehiclecntrl`, `engineimmobilizer`, `crashsensor`, `electronicbreakdis`, `rearcamera`, `blindspot`, `hillassist`,`model_id`,`variant_id`) VALUES 
     ('$antilock','$break','$cls','$noa','$daynightrearview','$psvm','$xhl','$halogenheadlamp','$rsb','$sbw','$daw','$sib','$adjustableseat','$vcs','$engineim','$crashsensor','$ebd','$rearcamera','$bsm','$hillassist',$modelName,$varientName)";
 
     $result = $con->query($sql);

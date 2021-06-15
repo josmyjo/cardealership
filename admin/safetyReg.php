@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
     $bsm= $_POST['bsm'];
     $hillassist= $_POST['hillassist'];
     $sql ="INSERT INTO `safety` (`antilock_breakingstm`, `brakeassist`, `centrellockstm`, `airbags`, `daynight_rearviewmirror`, `passengersidemirror`, `xenonheadlamp`, `halogenheadlamp`, `rearseatbelt`, `seatbeltwarning`, `doorajarwarning`, `sideimpactbeams`, `adjustableseat`, `vehiclecntrl`, `engineimmobilizer`, `crashsensor`, `electronicbreakdis`, `rearcamera`, `blindspot`, `hillassist`, `variant_id`,`model_id`) VALUES 
-    ('$antilock','$break','$cls','$noa','$daynightrearview','$psvm','$xhl','$halogenheadlamp','$rsb','$sbw','$daw','$sib','$adjustableseat','$vcs','$engineim','$crashsensor','$ebd','$rearcamera','$bsm','$hillassist',$modelName,$varientName)";
+    ('$antilock','$break','$cls','$noa','$daynightrearview','$psvm','$xhl','$halogenheadlamp','$rsb','$sbw','$daw','$sib','$adjustableseat','$vcs','$engineim','$crashsensor','$ebd','$rearcamera','$bsm','$hillassist','$varientName','$modelName')";
 
     $result = $con->query($sql);
 
@@ -46,7 +46,7 @@ if(isset($_POST['submit']))
 <div class="container jumbotron p-3 my-3 ">
     <div class="card">
         <div class="card-header">
-            <h5 class="title">Model</h5>
+            <h5 class="title">SAFETY</h5>
         </div>
         <div class="card-body">
             <form action="#" method="POST">

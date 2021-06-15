@@ -69,6 +69,7 @@ if(isset($_GET['id'])) {
                         ?>
                         <a href="<?=$url?>" class="btn btn-primary book-btn">Book Now</a>
                         <a href="<?=$url2?>" class="btn btn-primary book-btn">Book Test Drive</a>
+                        <a href="#" class="btn btn-primary book-btn add_to_compare" data-v-id="<?=$variant_id?>">Compare</a>
                                         </div>
                     </div>
             </div>
@@ -86,7 +87,10 @@ if(isset($_GET['id'])) {
                     <li><a href='#tabs-1'><i class="fa fa-cog"></i> Vehicle Specs</a></li>
                     <li><a href='#tabs-2'><i class="fa fa-info-circle"></i> Vehicle Description</a></li>
                     <li><a href='#tabs-3'><i class="fa fa-plus-circle"></i> Vehicle Extras</a></li>
+                    <li><a href='#tabs-5'><i class="fa fa-automobile"></i> safety Details</a></li>
                     <li><a href='#tabs-4'><i class="fa fa-phone"></i> Contact Details</a></li>
+                    
+
                     </ul>
                 </div>
                 <div class="col-lg-8">
@@ -185,217 +189,137 @@ if(isset($_GET['id'])) {
                     <article id='tabs-2'>
                         <h4>Vehicle Description</h4>
                         
-                        <p>- Colour coded bumpers <br> - Tinted glass <br> - Immobiliser <br> - Central locking - remote <br> - Passenger airbag <br> - Electric windows <br> - Rear head rests <br> - Radio <br> - CD player <br> - Ideal first car <br> - Warranty <br> - High level brake light <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                        <p>- Colour coded bumpers <br> - Break assist <br> - Antilock Breaking System <br> - Central locking - remote <br> - Passenger airbag <br> - Electric windows <br> - Rear head rests <br> - Radio <br> - CD player <br> - Ideal first car <br> - Warranty <br> - High level brake light <br> Maruti Suzuki is India's largest carmaker. The Maruti Suzuki line-up comprises hatchbacks, sedans, MPVs and an SUV.Today, Maruti Suzuki has about 19 active models in the market. This company has discontinued several of its existing models over the years because of improvements in design and so on. Some of the famous models discontinued by the company include the Maruti 800, Maruti 1000, Esteem, Zen, Versa, Zen Estilo and Ritz, among others.</p> 
                     </article>
+
                     <article id='tabs-3'>
                         <h4>Vehicle Extras</h4>
-                        <h5 style="color:Tomato;">SAFETY</h5>
-                        <br>
-                        <div class="row">   
+                        <h5 style="color:Tomato;">INTERIOR</h5>
+                        <div class="row">
                             <div class="col-sm-6">
-                           
-                        
-                                <p>ABS</p>
-                                <p><?= $ro['antilock_breakingstm']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Break assist</p>
-                                <p><?= $ro['brakeassist']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Centrel Locking System </p>
-                                <p><?= $ro['centrellockstm']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>No Of Airbags </p>
-                                <p><?= $ro['airbags']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Day Night Rear view</p>
-                                <p><?= $ro['daynight_rearviewmirror']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Passenger Side View Mirror</p>
-                                <p><?= $ro['passengersidemirror']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Xenon head lamp</p>
-                                <p><?= $ro['xenonheadlamp']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Halogen head lamp</p>
-                                <p><?= $ro['halogenheadlamp']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Rear Seat Belt</p>
-                                <p><?= $ro['rearseatbelt']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Seat Belt Warning </p>
-                                <p><?= $ro['seatbeltwarning']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Door Hazard Warning</p>
-                                <p><?= $ro['doorajarwarning']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Side Impact Beams </p>
-                                <p><?= $ro['sideimpactbeams']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Adjustable Seat </p>
-                                <p><?= $ro['adjustableseat']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Vehicle Control stability </p>
-                                <p><?= $ro['vehiclecntrl']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Engine immobilizer</p>
-                                <p><?= $ro['engineimmobilizer']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Crash sensor</p>
-                                <p><?= $ro['crashsensor']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Electronic Break Distribution </p>
-                                <p><?= $ro['color']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Rear camera</p>
-                                <p><?= $ro['rearcamera']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Blind Spot Monitor</p>
-                                <p><?= $ro['blindspot']?></p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>Hill assist</p>
-                                <p><?= $ro['hillassist']?></p>
-                            </div>    
-                            <h5 style="color:Tomato;">INTERIOR</h5>
-                            
-                            <div class="col-sm-6">
-                            <p>Tachometer</p>
+                            <label>Tachometer</label>
                                 <p><?= $ro['tachometer']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Electronic Multi-Tripmeter</p>
+                                <label>Electronic Multi-Tripmeter</label>
                                 <p><?= $ro['electronic']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Leather Seats </p>
+                                <label>Leather Seats </label>
                                 <p><?= $ro['leather']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Digital Clock </p>
+                                <label>Digital Clock </label>
                                 <p><?= $ro['digitalclock']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Digital Odometer</p>
+                                <label>Digital Odometer</label>
                                 <p><?= $ro['digitalodometer']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Digital Lighter</p>
+                                <label>Digital Lighter</label>
                                 <p><?= $ro['digitallighter']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Height Adjustable DriverSeat</p>
+                                <label>Height Adjustable DriverSeat</label>
                                 <p><?= $ro['heightadjustable']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>ventilated Seats</p>
+                                <label>ventilated Seats</label>
                                 <p><?= $ro['ventilated']?></p>
                             </div>
+                       
                             <h5 style="color:Tomato;">EXTERIOR</h5>
                             <div class="row">   
                             <div class="col-sm-6">
-                                <p>Fog light front</p>
+                                <label>Fog light front</label>
                                 <p><?= $ro['foglightfont']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Adjustable Headlights<</p>
+                                <label>Adjustable Headlights<</label>
                                 <p><?= $ro['electric_adjustableseat']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Fog light rear </p>
+                                <label>Fog light rear </label>
                                 <p><?= $ro['foglightnear']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Power Antenna </p>
+                                <label>Power Antenna </label>
                                 <p><?= $ro['powerantenna']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Rain Sensing Wiper</p>
+                                <label>Rain Sensing Wiper</label>
                                 <p><?= $ro['rain']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Wheel Covers</p>
+                                <label>Wheel Covers</label>
                                 <p><?= $ro['wheel']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Sun roof</p>
+                                <label>Sun roof</label>
                                 <p><?= $ro['sun']?></p>
+                            </div>
                             </div>
                            
                             <h5 style="color:Tomato;">DIMENSIONS</h5>
-                    
+                            <div class="row">
                             <div class="col-sm-6">
-                                <p>Length</p>
+                                <label>Length</label>
                                 <p><?= $ro['length']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Width</p>
+                                <label>Width</label>
                                 <p><?= $ro['width']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Height</p>
+                                <label>Height</label>
                                 <p><?= $ro['height']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Wheelbase</p>
+                                <label>Wheelbase</label>
                                 <p><?= $ro['wheelbase']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Fronttrack</p>
+                                <label>Fronttrack</label>
                                 <p><?= $ro['fronttrack']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Reartrack</p>
+                                <label>Reartrack</label>
                                 <p><?= $ro['reartrack']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Seatingcapacity</p>
+                                <label>Seatingcapacity</label>
                                 <p><?= $ro['seatingcapacity']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>weight</p>
+                                <label>weight</label>
                                 <p><?= $ro['weight']?></p>
+                            </div>
                             </div>
                           
                             <h5 style="color:Tomato;">CAPABILITY</h5>
                       
                             <div class="row">   
                             <div class="col-sm-6">
-                            <p>Ground Clearance</p>
+                            <label>Ground Clearance</label>
                                 <p><?= $ro['groundcl']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Approach Angle</p>
+                                <label>Approach Angle</label>
                                 <p><?= $ro['approach']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Departure Angle </p>
+                                <label>Departure Angle </label>
                                 <p><?= $ro['depature']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Rampover Angle </p>
+                                <label>Rampover Angle </label>
                                 <p><?= $ro['rampover']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Water Wading Depth</p>
+                                <label>Water Wading Depth</label>
                                 <p><?= $ro['water']?></p>
+                            </div>
                             </div>
                             <h5 style="color:Tomato;">ENTERTAINMENT</h5>
                         <br>
@@ -403,31 +327,31 @@ if(isset($_GET['id'])) {
                             <div class="col-sm-6">
                            
                         
-                                <p>DVD Player </p>
+                                <label>DVD Player </label>
                                 <p><?= $ro['dvd_player']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Radio Player </p>
+                                <label>Radio Player </label>
                                 <p><?= $ro['radio_player']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Speaker</p>
+                                <label>Speaker</label>
                                 <p><?= $ro['speaker']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Usb And Auxilary Input </p>
+                                <label>Usb And Auxilary Input </label>
                                 <p><?= $ro['usb_auxilaryin']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Blutooth Connectivity</p>
+                                <label>Blutooth Connectivity</label>
                                 <p><?= $ro['blutooth']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Touch Screen</p>
+                                <label>Touch Screen</label>
                                 <p><?= $ro['touchscreen']?></p>
                             </div>
                             
-
+                            </div>
 
                             <h5 style="color:Tomato;">CONVENIENCE</h5>
                         <br>
@@ -435,103 +359,191 @@ if(isset($_GET['id'])) {
                             <div class="col-sm-6">
                            
                         
-                                <p>Power Steering </p>
+                                <label>Power Steering </label>
                                 <p><?= $ro['powerst']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Power Windows-Front</p>
+                                <label>Power Windows-Front</label>
                                 <p><?= $ro['pwf']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Power Windows-Rear</p>
+                                <label>Power Windows-Rear</label>
                                 <p><?= $ro['pwr']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Air Conditions </p>
+                                <label>Air Conditions </label>
                                 <p><?= $ro['aircondition']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Heater</p>
+                                <label>Heater</label>
                                 <p><?= $ro['heater']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Adjustable Steering</p>
+                                <label>Adjustable Steering</label>
                                 <p><?= $ro['adjustablesteer']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Air Quality Control </p>
+                                <label>Air Quality Control </label>
                                 <p><?= $ro['airquality']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Remote Climate Control</p>
+                                <label>Remote Climate Control</label>
                                 <p><?= $ro['remoteclimate']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Low Fuel WarningLight</p>
+                                <label>Low Fuel WarningLight</label>
                                 <p><?= $ro['lowfuel']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Trunk Light</p>
+                                <label>Trunk Light</label>
                                 <p><?= $ro['trunk']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p> Remote Horn $ Light Control</p>
+                                <label> Remote Horn $ Light Control</label>
                                 <p><?= $ro['remote']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Vanity Mirror</p>
+                                <label>Vanity Mirror</label>
                                 <p><?= $ro['vanity']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Cruise Control</p>
+                                <label>Cruise Control</label>
                                 <p><?= $ro['cruise']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Seat Lumber Support</p>
+                                <label>Seat Lumber Support</label>
                                 <p><?= $ro['seatlumber']?></p>
                             </div>
-
+                            </div>
                             <h5 style="color:Tomato;">SUSPENSION</h5>
                         <br>
                         <div class="row">   
                             <div class="col-sm-6">
-                            <p>Front Suspension</p>
+                            <label>Front Suspension</label>
                                 <p><?= $ro['front']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Rear Suspension</p>
+                                <label>Rear Suspension</label>
                                 <p><?= $ro['rear']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Brake Specification </p>
+                                <label>Brake Specification </label>
                                 <p><?= $ro['brake']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Front Brake Type </p>
+                                <label>Front Brake Type </label>
                                 <p><?= $ro['frontb']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Rear Brake Type</p>
+                                <label>Rear Brake Type</label>
                                 <p><?= $ro['rearb']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Tyres</p>
+                                <label>Tyres</label>
                                 <p><?= $ro['tyres']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Steering Type</p>
+                                <label>Steering Type</label>
                                 <p><?= $ro['steert']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Steering Gear Type</p>
+                                <label>Steering Gear Type</label>
                                 <p><?= $ro['steerg']?></p>
                             </div>
                             <div class="col-sm-6">
-                                <p>Acceleration</p>
+                                <label>Acceleration</label>
                                 <p><?= $ro['acceleration']?></p>
                             </div>
-                                                                             
-                    </article>           
+                         </div>                                              
+                    </article> 
+                    <article id='tabs-5'>
+                    <h4 style="color:Tomato;">SAFETY</h4>
+                        <br>
+                        <div class="row">   
+                            <div class="col-sm-6">
+                           
+                        
+                            <label>ABS</label>
+                                <p><?= $ro['antilock_breakingstm']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Break assist</label>
+                                <p><?= $ro['brakeassist']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Centrel Locking System </label>
+                                <p><?= $ro['centrellockstm']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>No Of Airbags </label>
+                                <p><?= $ro['airbags']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Day Night Rear view</label>
+                                <p><?= $ro['daynight_rearviewmirror']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Passenger Side View Mirror</label>
+                                <p><?= $ro['passengersidemirror']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Xenon head lamp</label>
+                                <p><?= $ro['xenonheadlamp']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Halogen head lamp</label>
+                                <p><?= $ro['halogenheadlamp']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Rear Seat Belt</label>
+                                <p><?= $ro['rearseatbelt']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Seat Belt Warning </label>
+                                <p><?= $ro['seatbeltwarning']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Door Hazard Warning</label>
+                                <p><?= $ro['doorajarwarning']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Side Impact Beams </label>
+                                <p><?= $ro['sideimpactbeams']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Adjustable Seat </label>
+                                <p><?= $ro['adjustableseat']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Vehicle Control stability </label>
+                                <p><?= $ro['vehiclecntrl']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Engine immobilizer</label>
+                                <p><?= $ro['engineimmobilizer']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Crash sensor</label>
+                                <p><?= $ro['crashsensor']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Electronic Break Distribution </label>
+                                <p><?= $ro['color']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Rear camera</label>
+                                <p><?= $ro['rearcamera']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Blind Spot Monitor</label>
+                                <p><?= $ro['blindspot']?></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Hill assist</label>
+                                <p><?= $ro['hillassist']?></p>
+                            </div>    
+                      </div>      
+                    </article>          
                             
                     <article id='tabs-4'>
                         <h4>Contact Details</h4>
@@ -540,7 +552,7 @@ if(isset($_GET['id'])) {
                             <div class="col-sm-6">
                                 <label>Name</label>
 
-                                <p>John Smith</p>
+                                <p>Anish John</p>
                             </div>
                             <div class="col-sm-6">
                                 <label>Phone</label>
@@ -549,11 +561,11 @@ if(isset($_GET['id'])) {
                             </div>
                             <div class="col-sm-6">
                                 <label>Mobile phone</label>
-                                <p>456789123 </p>
+                                <p>9447211324</p>
                             </div>
                             <div class="col-sm-6">
                                 <label>Email</label>
-                                <p><a href="#">john@carsales.com</a></p>
+                                <p><a href="#">Anish@carsales.com</a></p>
                             </div>
                         </div>
                     </article>
@@ -644,4 +656,32 @@ include "../user/footer.php";
                 $(".dropdown img.flag").toggleClass("flagvisibility");
             });
         });
+
+        $(".add_to_compare").click(function(){
+            $.ajax(
+            {
+                type:"POST",
+                url: "../user/add_to_compare.php",
+                data: {id: $(this).attr("data-v-id")},
+                dataType: "json",
+                success: function (data) {
+                    if(data.status == 1){
+                        if(data.redirect == 1){
+                            window.location.href = "../user/compire.php";
+                        }else{
+                            alert(data.message);
+                        }
+                    }else{
+                        alert(data.message);
+                        if(data.redirect == 1){
+                            window.location.href = "../user/compire.php";
+                        }
+                    }
+                }
+             
+            }
+        );
+
+        });
+
     </script>

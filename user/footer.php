@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        Copyright © 2020 Company Name
-                        - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                        Copyright © 2021
+                        <a href="https://www.invisionapp.com">MARUTI SUZUKI INDIA LIMITED</a>
                     </p>
                 </div>
             </div>
@@ -13,7 +13,7 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="../user/assets/js/jquery-2.1.0.min.js"></script>
+
 
     <!-- Bootstrap -->
     <script src="../user/assets/js/popper.js"></script>
@@ -28,7 +28,12 @@
     <script src="../user/assets/js/accordions.js"></script>
     
     <!-- Global Init -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="../user/assets/js/custom.js"></script>
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" type="text/javascript" async defer></script>
+
+  
 
   </body>
 </html>

@@ -1,15 +1,14 @@
 <?php
-include "../manager/header.php";
+include "../admin/header.php";
 include '../connection.php';
 
-$modalName =$id=$branchName=$color=$variantName=$price=$engineNumber=$etype=$dis=$mp=$mt=$noc=$gtype=$gbox=$dtype='';
-$bid  = $_SESSION['manager_id']??0;
+$modalName =$id=$branchName=$bid=$color=$variantName=$price=$engineNumber=$etype=$dis=$mp=$mt=$noc=$gtype=$gbox=$dtype='';
 $img='Choose Image';
 if( isset($_GET['id']) ){
     $id = $_GET['id'];
     $result=mysqli_query ($con,"SELECT * FROM variant v, carmodel c, branch b WHERE b.branchID=c.branchID AND c.modelid=v.model_id AND variant_id=$id");
 	    $row=mysqli_fetch_array($result);
-        $bid  = $_SESSION['manager_id']??$row['branchID'];
+        $bid = $row['branchID'];
         $branchName = $row['branchName'];
         $modalName =   $row['model_id'];
         $variantName = $row['variant_name'];
@@ -56,14 +55,13 @@ if($vID !=""){
         unlink("../images/pics/".$imgCheck);
         $moved = move_uploaded_file($file_tmp,"../images/pics/".$img);
 
-        mysqli_query($con,"UPDATE variant SET variant_name='$variantName',price='$price',engine_number=$engineNumber,engtype='$etype',displacement='$dis',max_power='$mp',max_torque='$mt',no_cylinder='$noc',geartype='$gtype',gearbox='$gbox',drivetype='$dtype',model_id='$modalID',pic='$img',color='$color' WHERE variant_id=$vID");
-        echo '<script>window.location="../manager/variantView.php"</script>';
+        mysqli_query($con,"UPDATE variant SET variant_name='$variantName',price=$price,engine_number=$engineNumber,engtype='$etype',displacement='$dis',max_power='$mp',max_torque='$mt',no_cylinder='$noc',geartype='$gtype',gearbox='$gbox',drivetype='$dtype',model_id='$modalID',pic='$img',color='$color' WHERE variant_id=$vID");
+        echo '<script>window.location="../admin/variantView.php"</script>';
     }
     else{
-        mysqli_query($con,"UPDATE variant SET variant_name='$variantName',price='$price',engine_number=$engineNumber,engtype='$etype',displacement='$dis',max_power='$mp',max_torque='$mt',no_cylinder='$noc',geartype='$gtype',gearbox='$gbox',drivetype='$dtype',model_id='$modalID',color='$color' WHERE variant_id=$vID");
-
+        mysqli_query($con,"UPDATE variant SET variant_name='$variantName',price=$price,engine_number=$engineNumber,engtype='$etype',displacement='$dis',max_power='$mp',max_torque='$mt',no_cylinder='$noc',geartype='$gtype',gearbox='$gbox',drivetype='$dtype',model_id='$modalID',color='$color' WHERE variant_id=$vID");
         //header("location:variantView.php");
-        echo '<script>window.location="../manager/variantView.php"</script>';
+        echo '<script>window.location="../admin/variantView.php"</script>';
     }
 }
 else{
@@ -80,7 +78,7 @@ else{
 
     if($result){
     echo "new Recoed created";
-    echo '<script>window.location="../manager/varient.php"</script>';
+    echo '<script>window.location="../admin/varient.php"</script>';
     }
     else {
         echo "Error:".$sql ."". $con->error;
@@ -101,7 +99,7 @@ else{
                 <form action="#" method="POST" name="form1" id="form1" enctype="multipart/form-data" >
                     <input type="hidden" class="form-control" id="inputVariantID" value="<?=  $id ?>" name="variantID" placeholder="" required />
                     <input type="hidden" class="form-control" id="inputImage" value="<?=  $img ?>" name="imgCheck" placeholder="" required />
-                    <div class="form-group" style="display: none;">
+                    <div class="form-group">
                         <label for="inputBranchlName" class="control-label " >Branch  </label>
                             <select required class="form-control" id="getBranch" name="branchName">
                                 <option value="0">Select One</option>
@@ -200,7 +198,7 @@ else{
     </div>
 </div>
 <?php
-include "../manager/footer.php";
+include "../admin/footer.php";
 ?>
 
 <script>

@@ -13,37 +13,39 @@ include "../admin/header.php";
         </div>
         <div class="card-body">
             <div id="print">
-                <table class="table table-stripped,table table-hover" >
+                <table class="table table-responsive table-hover" id="myTable">
 
-
-                        <tr align="center">
-                            <th> Name </th>
-                            <th>  DOB </th>
-                            <th> Aadhar Number </th>
-                            <th> Phone Number </th>
-                            <th> Pin Code </th>
-                            <th>  Email </th>
-                                
-                        </tr>
-                        <?php
-                            while($row=mysqli_fetch_array($carResult))
-                            {
-                                ?>
-                                <tr align="center">
-                                    <td><?= $row['first_name'] ?> <?= $row['last_name'] ?></td>	
-                                    <td><?= $row['dob'] ?></td>	
-                                    <td><?= $row['aadhar_number'] ?></td>	
-                                    <td><?= $row['phone_number'] ?></td>
-                                    <td><?= $row['pin_code'] ?></td>
-                                    <td><?= $row['email'] ?></td>
-                                    
-                                <?php 
-                                    echo "</tr>";
-                                    
-                            }
-
+                <thead>
+                    <tr align="center">
+                        <th> Name </th>
+                        <th>  DOB </th>
+                        <th> Aadhar Number </th>
+                        <th> Phone Number </th>
+                        <th> Pin Code </th>
+                        <th>  Email </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        while($row=mysqli_fetch_array($carResult))
+                        {
                             ?>
-                </table>
+                            <tr align="center">
+                                <td><?= $row['first_name'] ?> <?= $row['last_name'] ?></td> 
+                                <td><?= $row['dob'] ?></td> 
+                                <td><?= $row['aadhar_number'] ?></td>   
+                                <td><?= $row['phone_number'] ?></td>
+                                <td><?= $row['pin_code'] ?></td>
+                                <td><?= $row['email'] ?></td>
+                                
+                            <?php 
+                                echo "</tr>";
+                                
+                        }
+
+                        ?>
+                </tbody>
+            </table>
             </div>
             <div class="col-xs-12 text-center">
                 <input type="button" class="btn btn-secondary" value="Print" onclick="codespeedy()">

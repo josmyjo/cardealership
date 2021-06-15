@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
 <div class="container jumbotron p-3 my-3 ">
     <div class="card">
         <div class="card-header">
-            <h5 class="title">Model</h5>
+            <h5 class="title">EXTERIOR</h5>
         </div>
         <div class="card-body">
             <form action="#" method="POST" name="form1" id="form1" >

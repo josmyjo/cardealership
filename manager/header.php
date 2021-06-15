@@ -88,7 +88,7 @@
                   
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="../manager/userView.php">User</a>
+                  <a class="dropdown-item" href="../manager/userView.php">USER</a>
                   <a class="dropdown-item" href="../manager/modelView.php">CAR</a>
                   <a class="dropdown-item" href="../manager/variantView.php">VARIANT</a>
                   <a class="dropdown-item" href="../manager/carPicsView.php">PICTURES</a>
@@ -103,7 +103,17 @@
                 </div>
               </li>
               
-
+          <li class=" dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="now-ui-icons education_atom"></i> USER
+                  
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="../manager/complaintView.php">COMPLAINT</a>
+                  <a class="dropdown-item" href="../manager/feedBackView.php">FEED BACK</a>
+                 
+                </div>
+              </li>
           <li class=" dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <i class="now-ui-icons education_atom"></i> BOOKING STATUS
@@ -116,12 +126,13 @@
                 </div>
               </li>
         
-          <li class=" dropdown active-pro">
+          <li class=" dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <i class="now-ui-icons education_atom"></i> REPORT
                   
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="../manager/userReport.php">USER</a>
                   <a class="dropdown-item" href="../manager/modelReport.php">CAR</a>
                   <a class="dropdown-item" href="../manager/varientReport.php">VARIANT</a>
                   <a class="dropdown-item" href="../manager/carPicsReport.php">PICTURES</a>
@@ -129,7 +140,7 @@
                   <a class="dropdown-item" href="../manager/exteriorReport.php">EXTERIOR</a>
                   <a class="dropdown-item" href="../manager/safetyReport.php">SAFETY</a>
                   <a class="dropdown-item" href="../manager/capabilityReport.php">CAPABILITY</a>
-                  <a class="dropdown-item" href="../manager/userReport.php">User</a>
+          
                   <a class="dropdown-item" href="../manager/capabilityReport.php">CAPABILITY</a>
                  <!-- <a class="dropdown-item" href="../manager/convenienceReport.php">CONVENIENCE</a>
                   <a class="dropdown-item" href="../manager/interior.php">INTERIOR</a>
@@ -159,7 +170,7 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
+            <!-- <form>
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
                 <div class="input-group-append">
@@ -168,37 +179,29 @@
                   </div>
                 </div>
               </div>
-            </form>
+            </form> -->
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#pablo">
                   <i class="now-ui-icons media-2_sound-wave"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Stats</span>
                   </p>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="now-ui-icons location_world"></i>
+                  <i class="now-ui-icons users_single-02"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="../manager/changePass.php">Change Password</a>
                   <a class="dropdown-item" href="../manager/logout.php">Log Out</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="now-ui-icons users_single-02"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>

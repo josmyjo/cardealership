@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION['user_id'] = "";
+$_SESSION['admin'] = "";
 $_SESSION = [];
 session_unset();
-header ("location:index.php");
+header ("location:../adminLogin/index.html");
 ?>

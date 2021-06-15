@@ -1,6 +1,14 @@
 <?php
 include "../manager/header.php";
 include '../connection.php';
+if(isset($_GET["id"]))
+{
+	$id=$_GET["id"];
+    mysqli_query($con,"delete from booking where BookingID=$id ");
+
+    echo '<script>window.location="../manager/bookingView.php"</script>';
+
+}
 $manager = $_SESSION['manager_id'];
 $result=mysqli_query ($con,"SELECT * FROM `booking` b join variant v on v.variant_id=b.variant_id join carmodel c on c.modelid=v.model_id join branch br on br.branchID=c.branchID join userregistration u on u.user_id=b.user_id where br.branchID=$manager");
 	$rowcount=mysqli_num_rows($result);
@@ -34,12 +42,12 @@ $result=mysqli_query ($con,"SELECT * FROM `booking` b join variant v on v.varian
 	                                <td><?= $row['referenceNumber'] ?></td>
 	                                <td><?= $row['modelname'] ?></td>	
 	                                <td><?= $row['variant_name'] ?></td>	
-	                                <td><?= $row['first_name'] ?></td>
+	                                <td><?= $row['first_name'] ?></td>	
 	                                <td><?= $row['order_date'] ?></td>
 	                                <td><?= $row['amount'] ?></td>
 	                               
 	                                <td>
-	                                    <a onclick="return confirm('are you sure. you want to delete this.?')" href="exteriorView.php?id=<?=$row['exterior_id'] ?>">Delete</a>
+	                                    <a onclick="return confirm('are you sure. you want to delete this.?')" href="bookingView.php?id=<?=$row['BookingID'] ?>">Delete</a>
 	                                </td>
 	                            </tr>
 	                    <?php 

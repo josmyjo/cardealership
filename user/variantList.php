@@ -47,8 +47,7 @@ if(isset($_GET['id'])) {
 
                                 <ul class="social-icons">
                                     <li><a href="carDetails.php?id=<?php echo $row['variant_id']?>">+ View Car</a></li>
-                                    <li><a href="variantList.php?id=<?php echo $row['variant_id']?>"> Book</a></li>
-                                    <li><a href="variantList.php?id=<?php echo $row['variant_id']?>"> Text Ride</a></li>
+                                    <li><a href="#" class=" add_to_compare" data-v-id="<?php echo $row['variant_id']?>">Compare</a></li>
 
                                 </ul>
                             </div>
@@ -61,9 +60,7 @@ if(isset($_GET['id'])) {
 
             <br>
 
-            <div class="main-button text-center">
-                <a href="cars.html">View Cars</a>
-            </div>
+            
         </div>
     </section>
 
@@ -72,3 +69,31 @@ if(isset($_GET['id'])) {
 <?php
 include "../user/footer.php";
 ?>
+<script>
+    $(".add_to_compare").click(function(){
+            $.ajax(
+            {
+                type:"POST",
+                url: "../user/add_to_compare.php",
+                data: {id: $(this).attr("data-v-id")},
+                dataType: "json",
+                success: function (data) {
+                    if(data.status == 1){
+                        if(data.redirect == 1){
+                            window.location.href = "../user/compire.php";
+                        }else{
+                            alert(data.message);
+                        }
+                    }else{
+                        alert(data.message);
+                        if(data.redirect == 1){
+                            window.location.href = "../user/compire.php";
+                        }
+                    }
+                }
+             
+            }
+        );
+
+        });
+</script>

@@ -21,7 +21,7 @@ include '../../connection.php';
         if(empty(mysqli_num_rows($result))){
             echo "<p>Invalid User Name! </p>";
         }
-        elseif(empty(mysqli_num_rows($result2)))
+        else if(empty(mysqli_num_rows($result2)))
         {
             echo "<p>Invalid Password </p> ";
         }

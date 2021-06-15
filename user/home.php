@@ -1,8 +1,13 @@
 <?php
 include "../user/header.php";
 include '../connection.php';
+$branch_id = $_GET['branch_id']??0;
+if($branch_id > 0){
+    $result=mysqli_query ($con,"SELECT *FROM carmodel where branchid =".$branch_id);
+}else{
+    $result=mysqli_query ($con,"SELECT *FROM carmodel");
+}
 
-$result=mysqli_query ($con,"SELECT *FROM carmodel");
 
 ?>
 
@@ -16,8 +21,36 @@ $result=mysqli_query ($con,"SELECT *FROM carmodel");
                     </div>
                 </div>
             </div>
+            <div class="col-12 text-center">
+                <div class="col-lg-8 offset-lg-4">
+                        <form method="get">
+                            
+                                <div class="form-group col-6">
+                                <select name="branch_id" class="form-control">
+                                     <option value="0">Select One</option>
+                                    <?php
+                                    $resultss=mysqli_query($con,"SELECT *FROM branch");
+                                    while($row=mysqli_fetch_array($resultss))
+                                    {
+                                    ?>
+                                <option value="<?php echo $row['branchID'];?>">
+                                    <?php echo $row['branchName']; ?> 
+                                </option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <br>
+                        </form>
+                    </div>
+            </div>
                       
             <div class="row">
+                    
                 <?php
                     while($row=mysqli_fetch_array($result)){
                 ?>  
@@ -41,6 +74,7 @@ $result=mysqli_query ($con,"SELECT *FROM carmodel");
 
                                 <ul class="social-icons">
                                     <li><a href="variantList.php?id=<?php echo $row['modelid']?>">+ View Car</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -52,9 +86,7 @@ $result=mysqli_query ($con,"SELECT *FROM carmodel");
 
             <br>
 
-            <div class="main-button text-center">
-                <a href="cars.html">View Cars</a>
-            </div>
+           
         </div>
     </section>
     

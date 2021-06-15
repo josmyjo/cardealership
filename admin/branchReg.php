@@ -106,7 +106,7 @@ $('#inputEmail,#inputPhno').change(function(e) {
         $.ajax({
           type: "POST",
           url: "mangerEmailCheck.php",
-          data: { email: email,phno:phno},
+          data: { email: email,phno:phno,id:'<?=$id?>'},
           dataType: "json",
           success: function (data) {
           

@@ -55,18 +55,31 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="../user/index.html" class="active">Home</a></li>
-                            <li><a href="home.php">Cars</a></li>
+                            <li><a href="../user/index.php" class="active">Home</a></li>
+                            <li><a href="home.php">CARS</a></li>
+                            <li><a href="compire.php">COMPARE</a></li>
+
+                        <?php if( isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0 ){ ?>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">My Activity</a>
+                              
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="userBookingView.php">CAR BOOK</a>
+                                    <a class="dropdown-item" href="userTestRideView.php">TEST RIDE</a>
+                                    <a class="dropdown-item" href="userServices.php">SERVICES</a>
+                                    <a class="dropdown-item" href="userComplaints.php">COMPLAINTS</a>
+                                    <a class="dropdown-item" href="userFeedBack.php">FEED BACK</a>
+                                </div>
+                            </li>
+                            <li><a href="../user/Complaints.php" class="active">COMPLAINT</a></li>
+                            <li><a href="../user/feed.php" class="active">FEED BACK</a></li>
+                        <?php } ?>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="https://www.marutisuzuki.com/corporate/about-us">About Us</a>
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="team.html">Team</a>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="terms.html">Terms</a>
+                                    
                                 </div>
                             </li>
                             <?php if( isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0 ){ ?>
@@ -124,21 +137,21 @@
                             <img src="assets/images/product-1-720x480.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
+<!--                             <span>
+                                <del><sup>$</sup> </del> &nbsp; <sup>$</sup>
                             </span>
 
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                            <h4></h4>
 
                             <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-dashboard"></i>  &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cube"></i>  &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cog"></i>  &nbsp;&nbsp;&nbsp;
                             </p>
-
-                            <ul class="social-icons">
+ -->
+                           <!--  <ul class="social-icons">
                                 <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
@@ -147,23 +160,21 @@
                         <div class="image-thumb">
                             <img src="assets/images/product-2-720x480.jpg" alt="">
                         </div>
-                        <div class="down-content">
+                        <!-- <div class="down-content">
                             <span>
                                 <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
                             </span>
 
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                            <h4></h4>
 
                             <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
+                                
                             </p>
 
                             <ul class="social-icons">
                                 <li><a href="car-details.html">+ View Car</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -172,7 +183,7 @@
                             <img src="assets/images/product-3-720x480.jpg" alt="">
                         </div>
                         <div class="down-content">
-                            <span>
+                        <!--     <span>
                                 <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
                             </span>
 
@@ -187,16 +198,13 @@
                             <ul class="social-icons">
                                 <li><a href="car-details.html">+ View Car</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
 
             <br>
 
-            <div class="main-button text-center">
-                <a href="home.php">View Cars</a>
-            </div>
         </div>
     </section>
     <!-- ***** Cars Ends ***** -->
@@ -222,17 +230,23 @@
                     <h5 class="modal-title text-light" id="exampleModalLabel">We would love to hear from you!!</h5> <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
                 </div>
                 <div class="modal-body">
-                    <form class="form my-3 mr-2 ml-2">
+                    <form class="form my-3 mr-2 ml-2" action="contactSupport.php" method="POST">
                         <div class="form-row">
-                            <div class="form-group col-sm"> <label for="exampleInputEmail1" style="color: #fff;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First"> </div>
-                            <div class="form-group col-sm"> <label class="sm-lbl" for="exampleInputEmail1" style="color:rgba(0, 0, 0, 0); visibility: hidden;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last"> </div>
+                            <div class="form-group col-sm"> <label for="exampleInputEmail1" style="color: #fff;">Enter Name</label> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="firstName" placeholder="First"> </div>
+                            <div class="form-group col-sm"> <label class="sm-lbl" for="exampleInputEmail1" style="color:rgba(0, 0, 0, 0); visibility: hidden;">Enter Name</label> <input type="text" name ="lastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last"> </div>
                         </div>
-                        <div class="form-group"> <label for="exampleInputEmail1" style="color: #fff;">Enter Email</label> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""> </div>
-                        <div class="form-group"> <label for="exampleFormControlTextarea1" style="color: #fff;">Your Query or Question</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> </div>
+                        <div class="form-group"> <label for="exampleInputEmail1" style="color: #fff;">Enter Email</label> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder=""> </div>
+                        <div class="form-group"> <label for="exampleFormControlTextarea1" style="color: #fff;">Your Query or Question</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name ="query"></textarea> </div>
+                        <div class="form-group text-center">        
+                            <input type="submit" class="btn btn-outline-light ml-sm-2" style="border-radius: 50px; width:100%;" name="submit" value="submit">
+                        </div>
+                        <div class="modal-footer"> <button type="button" class="btn btn-outline-light ml-sm-2" style="border-radius: 50px; width:100%;" data-dismiss="modal" aria-label="Close">close</button> </div>
                     </form>
                 </div>
-                <div class="modal-footer"> <button type="button" class="btn btn-outline-light ml-sm-2" style="border-radius: 50px; width:100%;" data-dismiss="modal" aria-label="Close">Submit</button> </div>
+                
+
             </div>
+
         </div>
     </div>
 </div>    </section>
@@ -244,8 +258,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        Copyright © 2020 Company Name
-                        - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                        Copyright © 2021 Company Name:
+                        -  <a href="#">MARUTI SUZUKI INDIA LIMITED</a>
                     </p>
                 </div>
             </div>
